@@ -14,3 +14,21 @@ O Api Gateway foi criado as rotas cada requisição e cada rota invoca o Lambda.
 ## DynamoDB
 
 No DynamoDB foi criado um banco de dados onde o a chave primária é uma string.
+
+
+## Execução do projeto na AWS
+
+Faça o clone do projeto e rode o comando ``` npm install ```.
+
+
+Com as depêndencias instaladas, crie um zip com os arquivos.
+
+Crie uma nova função Lambda, na aba Código faça o upload do zip com o código que acabou de criar.
+
+Crie um novo banco de dados no DynamoDB e defina sua chave primária como string
+
+OBS: Por padrão o Lambda não tem acesso ao DynamoDB, necessário liberar o acesso.
+
+Acesse o IAM, Acesse função e procure pela função lambda que acabou de criar.
+
+Na aba permissões clique em Anexa politica e pesquise pela e pesquise pela politica AmazonDynamoDBFullAccess.
